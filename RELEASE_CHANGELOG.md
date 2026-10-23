@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.3](https://github.com/cubrid-lab/cubrid-mcp-server/compare/v0.5.2...v0.5.3) (2026-10-23)
+
+
+### Documentation
+
+* **agents:** require repository-local issue authoring checks ([#383](https://github.com/cubrid-lab/cubrid-mcp-server/issues/383)) ([4f04af7](https://github.com/cubrid-lab/cubrid-mcp-server/commit/4f04af7b503cae0e2fcc97b79326a629d9e68aea))
+* enforce repository-local issue drafting ([4f04af7](https://github.com/cubrid-lab/cubrid-mcp-server/commit/4f04af7b503cae0e2fcc97b79326a629d9e68aea))
+
 ## [0.5.2](https://github.com/cubrid-lab/cubrid-mcp-server/compare/v0.5.1...v0.5.2) (2026-10-20)
 
 
