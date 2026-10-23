@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.3] - 2026-10-23
+
 ### Upgrade notes
 
 - **`make integration` now starts its own CUBRID (#379)** — it used to run `pytest -m integration` against a CUBRID you had already started. It now starts a uniquely named `cubrid/cubrid:$(CUBRID_VERSION)` container (default 11.4) with `demodb`, publishes the broker on host port `$(INTEGRATION_PORT)` (default 33000), waits for `demodb`, runs the integration tests against `127.0.0.1:$(INTEGRATION_PORT)/demodb` as `dba` (exported `CUBRID_*` connection variables are ignored), and always removes that container, so it needs Docker. The old behavior is `make integration-local`. `make test` now also measures coverage and fails below `fail_under = 95` and writes `coverage.xml`, `make lint` checks the whole repository (`ruff check .`) instead of `cubrid_mcp_server/` and `tests/`, and `make check` adds `format-check`, so all three can fail where they passed before.
@@ -18,6 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Documentation
 
 - **Make targets in the contributor docs (#379)** — `CONTRIBUTING.md`, `AGENTS.md`, the PR template and the README development section (English and Korean) describe the new targets, the `make integration` variables and that CI calls the same targets. Refs #379.
+
+* **agents:** require repository-local issue authoring checks ([#383](https://github.com/cubrid-lab/cubrid-mcp-server/issues/383)) ([4f04af7](https://github.com/cubrid-lab/cubrid-mcp-server/commit/4f04af7b503cae0e2fcc97b79326a629d9e68aea))
+* enforce repository-local issue drafting ([4f04af7](https://github.com/cubrid-lab/cubrid-mcp-server/commit/4f04af7b503cae0e2fcc97b79326a629d9e68aea))
 
 ### CI
 
